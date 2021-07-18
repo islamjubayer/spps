@@ -1,0 +1,103 @@
+body{
+      margin: 0;
+      font-family: 'Otomanopee One', sans-serif;
+
+  }
+  h1{
+      font-size: 50px;
+  }
+  h2{
+      font-size: 40px;
+  }
+  p{
+      color: rgb(0, 0, 0);
+  }
+  .blue{
+      color:rgb(78, 49, 245);
+  }
+  .right{
+      width: 40%;
+      float: right;
+      margin-right: 5%;
+      padding-right: 2%;
+  }
+  .left img{
+      width: 25%;
+      margin-left: 5%;
+      padding-left: 2%;
+
+  }
+  .top{
+      /* border: 1px solid red; */
+      background-image: url("asset/background01.jpg");
+      background-repeat: no-repeat;
+      width: 100%;
+  }
+  section{
+      height: 500px;
+      padding-bottom: 100px;
+  }
+  .contact-button{
+      text-decoration: none;
+      background-color: rgb(61, 61, 61);
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+  }
+  .middle{
+      background-image: url("asset/background02.jpg");
+      background-repeat: no-repeat;
+      padding-bottom: 80px;
+
+  }
+  .middle-left{
+    width: 40%;
+    float: left;
+    margin-left: 5%;
+    padding-right: 2%;
+  }
+  .middle-right img{
+      padding-top: 5%;
+    width: 35%;
+    margin-left: 5%;
+    padding-left: 2%;
+
+  }
+  .shadow{
+      box-shadow: 10px 10px 40px rgb(37, 37, 37);
+      border-radius: 5px;
+      height: 80%;
+      background-color: white;
+  }
+  .bottom{
+      background-image: url("asset/background012.jpg");
+      background-repeat: no-repeat;
+      background-position: left;
+  }
+  .bottom-box{
+    float:left;
+    width: 30%;
+    box-sizing: border-box;
+    margin-left: 3%;
+    padding-left: 2%;
+
+  }
+
+  #left{
+      border-left: 7px solid;
+      border-image:linear-gradient(rgb(152, 154, 235), rgb(39, 0, 179)); 
+      border-image-slice: 1;
+  }
+  #middle{
+    border-left: 7px solid;
+    border-image:linear-gradient( rgb(39, 0, 179),rgb(152, 154, 235)); 
+    border-image-slice: 1;
+  
+  }
+  #right{
+    border-left: 7px solid;
+    border-image:linear-gradient(rgb(152, 154, 235), rgb(39, 0, 179)); 
+    border-image-slice: 1;
+
+}

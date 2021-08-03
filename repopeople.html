@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: #dfe4ea;
+      }
+      img {
+        height: 150px;
+        width: 120px;
+         
+      }
+      .flex-row {
+        margin-top: 2rem;
+        margin-bottom: 5px;
+        padding: 5px;
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #6ab04c;
+        justify-content: center;
+
+        border-radius: 35px;
+        font-size: 30px;
+      }
+      .flex-column {
+        /* margin: 1rem; */
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+
+        /* align-items: center; */
+
+      }
+      p {
+        padding: 3px;
+      }
+      .btn{
+
+      background-color: rgb(61, 61, 61);
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      font-size: 20px;
+
+ }
+
+  .blue{
+      color:rgb(57, 124, 201);
+  }
+  .shadow{
+      box-shadow: 10px 10px 40px rgb(94, 94, 94);
+      border-radius: 5px;
+      height: 15%;
+      background-color: #bdd8cd;
+  }
+    </style>
+    <title>GITHUB</title>
+  </head>
+  <body>
+     <h1><span class="blue">Github</span> Users</h1>
+
+    
+    <br />
+    <div class="fetch">
+      <button class= "btn" id="fetch">Fetch Data</button>
+      
+    </div>
+    
+    <section id="info"></section>
+
+    <script>
+      document.getElementById("fetch").addEventListener("click", loadm);
+
+      function loadm() {
+        var req = new XMLHttpRequest();
+        req.open("GET", "https://api.github.com/users");
+
+        req.onload = function () {
+     //    if(req.status==200){
+          for (var i = 0; i <= 5; i++) {
+            var data = JSON.parse(req.responseText);
+            var url = data[i].avatar_url;
+            var id = data[i].id;
+            var login = data[i].login;
+
+            var display = `
+            <div class="flex-row shadow">
+              <div class="flex-column">
+                <img src="${url}" />
+              </div>
+              <div class=".flex-column">
+                <p>ID: ${id}</p>
+                <p>Login: ${login}</p>
+              </div>
+            </div>
+            `;
+            document.getElementById("info").innerHTML += display;
+          }
+       //    }
+        };
+        req.send();
+      }
+    </script>
+  </body>
+</html>
